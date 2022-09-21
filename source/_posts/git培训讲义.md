@@ -317,7 +317,7 @@ tags: git
    ```
 
 4. 放弃追踪一些文件或者目录
-   
+
       ```bash
       # 有的时间想要查看一下git跟踪了哪些文件，此命令就可以列出所有git正在跟踪的文件
       git ls-files
@@ -328,8 +328,24 @@ tags: git
       # 删除名为FileName的文件，同时git不再跟踪它
       git rm FileName
       ```
+
+5. 强制拉取远端代码
+
+      > 注意这种操作会覆盖掉本地代码
+
+      ```bash
+      # 获取远端的更新
+      git fetch --all
+      # 撤销本地、暂存区、版本库(用远程服务器的origin/master替换本地、暂存区、版本库) 强制进度指针对齐
+      git reset --hard origin/master
+      # 从远程仓库"同步"代码
+      git pull origin master
       
-   
+      # 或单条执行：
+      git fetch --all && git reset --hard origin/master && git pull
+      ```
+
+      
 
 #### 6 常见的难以理解的点
 
@@ -463,3 +479,22 @@ git config --global core.autocrlf false
 允许提交包含混合换行符的文件
 git config --global core.safecrlf false
 ```
+
+
+
+5. 频繁要求输入账号密码很烦，怎么解决？
+
+   - 终端执行该命令
+
+   ```bash
+   git config --global credential.helper store
+   ```
+
+   - 进行任意一种输需要身份验证的操作 如push pull等 输入一次正确的用户名和密码
+   - 检查你的`用户目录`下 会出现 `.git-credentials` 文件  打开后已经写入了用户名和密码 如下图所示
+   - 以后再不会要求输入用户名密码了
+
+![image-20220803180606437](git培训讲义/image-20220803180606437.png)
+
+![image-20220803180754460](git培训讲义/image-20220803180754460.png)
+

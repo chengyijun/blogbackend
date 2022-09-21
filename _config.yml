@@ -100,23 +100,27 @@ ignore:
 theme: butterfly
 
 jsonContent:
-  meta: false
-  pages: false
+  dateFormat: MM-DD
+  pages:
+    title: true
+    text: true
+    path: true
+    date: true
+    excerpt: true
+    preview: true
   posts:
     title: true
-    date: true
+    text: true
     path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true
+    date: true
+    excerpt: true
+    tags: [{
+      name: tag.name,
+      slug: tag.slug,
+      permalink: tag.permalink
+    }]
+    preview: true
+
 
 
 # Deployment
