@@ -1,7 +1,10 @@
 ---
 title: git培训讲义
 date: 2022-07-08 09:46:53
-tags: git
+categories:
+   - git
+tags:
+   - git
 ---
 ### GIT培训讲义
 
@@ -126,8 +129,6 @@ tags: git
     git init .
     ```
 
-    
-
 #### 4 git进阶操作
 
 1. 丢弃工作区的改动
@@ -202,7 +203,7 @@ tags: git
    > 所谓**Tag**其实就是一种特殊的Branch，主要作用为冻结版本，进行正式版本发布
 
    ![image-20220718143001430](git培训讲义/image-20220718143001430.png)
-   
+
    ```bash
    # 创建tag
    git tag -a V1.0.1 -m "message"
@@ -238,7 +239,7 @@ tags: git
    ```
 
    6. 分支操作
-   
+
    ```bash
    # 创建分支
    git branch branchName
@@ -344,8 +345,6 @@ tags: git
       # 或单条执行：
       git fetch --all && git reset --hard origin/master && git pull
       ```
-
-      
 
 #### 6 常见的难以理解的点
 
@@ -480,8 +479,6 @@ git config --global core.autocrlf false
 git config --global core.safecrlf false
 ```
 
-
-
 5. 频繁要求输入账号密码很烦，怎么解决？
 
    - 终端执行该命令
@@ -497,4 +494,3 @@ git config --global core.safecrlf false
 ![image-20220803180606437](git培训讲义/image-20220803180606437.png)
 
 ![image-20220803180754460](git培训讲义/image-20220803180754460.png)
-
