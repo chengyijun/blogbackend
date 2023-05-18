@@ -2,6 +2,7 @@
 title: git第二次培训
 date: 
 tags:
+  - git
 ---
 ##### 1 到底如何撤销
 
